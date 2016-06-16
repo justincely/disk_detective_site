@@ -14,7 +14,7 @@ def index():
 @app.route('/data')
 def data():
 
-    results = db.engine.execute("""SELECT * FROM sed LIMIT 20;""")
+    results = db.engine.execute("""SELECT * FROM sed ORDER BY RAND() LIMIT 20;""")
 
     keys = results.keys()
     rows = [row for row in results]
