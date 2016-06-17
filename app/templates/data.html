@@ -16,7 +16,7 @@
         {% for row in rows %}
         <tr>
           {% for val in row %}
-            {% if 'http' in val %}
+            {% if val is not number and 'http' in val %}
             <td> <a href="{{ val }}">
                   <img src="{{ val }}" alt="Img not found" style="width:100px;height:100px;">
                 </a></td>
